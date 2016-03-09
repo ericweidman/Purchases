@@ -29,7 +29,8 @@ public class Purchase {
     public Purchase() {
     }
 
-    public Purchase(String date, String credit, String cvv, String category) {
+    public Purchase(Customer customer, String date, String credit, String cvv, String category) {
+        this.customer = customer;
         this.date = date;
         this.credit = credit;
         this.cvv = cvv;
