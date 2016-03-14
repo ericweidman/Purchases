@@ -9,14 +9,29 @@
 <a href="/?category=Jewelry">Jewelry</a>
 <br><br>
 <ol>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Category</th>
+            <th>Credit Card</th>
+            <th>CVV</th>
+            <th>Date</th>
+        </tr>
 {{#purchases}}
-<table>
-<li><tr>
-    <td>{{customer.name}}</td><td>{{customer.email}}</td><td>{{category}}</td><td>{{credit}}</td><td>{{cvv}}</td><td>{{date}}</td>
-</tr></li>
-</table>
+<tr>
+    <td>{{customer.name}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{category}}</td>
+    <td>{{credit}}</td>
+    <td>{{cvv}}</td>
+    <td>{{date}}</td>
+</tr>
 {{/purchases}}
-</ol>
 
+</table>
+    {{#showNext}}
+    <a href="/?page={{nextPage}}{{#category}}&category={{.}}{{/category}}">Next</a>
+    {{/showNext}}
 </body>
 </html>
